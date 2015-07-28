@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+======================================================================================
+Configuration file for Content Management System CMS 5.0
+Author:          Michael Kear, AFP Webworks 
+Client:        Therapy Oz Sales Site
+Date:          7/Jul/2015
+======================================================================================
+-->
+<settings>
+<!--
+======================================================================================
+   GLOBAL Variables 
+======================================================================================
+-->
+   <globals>
+	 <pageincrement>7</pageincrement>
+	 <AddNewContentAt>bottom</AddNewContentAt>
+	 <AddNewPageAt>top</AddNewPageAt>
+	 <minaccesslevelEdit>20</minaccesslevelEdit>
+	 <minaccesslevelApprove>90</minaccesslevelApprove>
+	 <hometimezone>Australia/Sydney</hometimezone>
+   </globals>
+<!--
+======================================================================================
+   PRODUCTION SITE Variables 
+======================================================================================
+-->
+   <production>
+	 <sitename>TherapyOz</sitename>
+	 <dsn>therapyoz</dsn>
+	 <bansdsn>HawkesburyRadioCMS</bansdsn>
+	 <mailserver>mail.therapyoz.com</mailserver>
+	 <mailuser>webmaster@therapyoz.com</mailuser>
+	 <mailpassword>468$^*fhgFHG</mailpassword>
+	 <sitemailindex>[TherapyOzSales]</sitemailindex>
+	 <webmasteremail>mkear@therapyoz.com</webmasteremail>
+	 <siteURL>http://therapyoz.com</siteURL>
+   </production>
+<!--
+======================================================================================
+   DEVELOPMENT SITE Variables 
+======================================================================================
+-->
+   <development>
+	 <sitename>TherapyOz</sitename>
+	 <dsn>therapyoz</dsn>
+	 <bansdsn>HawkesburyRadioCMS</bansdsn>
+	 <mailserver>mail.therapyoz.com</mailserver>
+	 <mailuser>webmaster@therapyoz.com</mailuser>
+	 <mailpassword>468$^*fhgFHG</mailpassword>
+	 <sitemailindex>[DEV TherapyOzSales]</sitemailindex>
+	 <webmasteremail>mkear@therapyoz.com</webmasteremail>
+	 <siteURL>http://dev.therapysales</siteURL>
+   </development>
+</settings>
