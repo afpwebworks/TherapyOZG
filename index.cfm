@@ -1,3 +1,5 @@
+<cfparam default="Welcome"  name="request.pagename" />
+
 <!doctype html>
 <html>
 	<head>
@@ -10,7 +12,7 @@
 	<link rel="apple-touch-icon-precomposed" href="/css/ico/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="/css/ico/favicon.png">
 	<cfoutput>
-      <title>#application.sitename#</title>
+      <title>#application.sitename# <cfif isdefined("request.pagename")> #request.pagename#</cfif></title>
     </cfoutput>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
