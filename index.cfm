@@ -68,7 +68,8 @@
     <div class="wrap">
           <h2>Web Presence Instantly</h2>
           <p>Website design, hosting and management for professionals.  Clients are waiting to find you.</p>
-          <div> <a href="#" class="button getstarted">GET STARTED</a> <a href="#" class="button learnmore">LEARN MORE</a> </div>
+          <p>Stay tuned for more information. In the meantime, <a href="https://www.facebook.com/groups/953987707955202/">join my Facebook group, Hypnotherapy Australia </a></p>
+      <div> <a href="#" class="button getstarted">GET STARTED</a> <a href="#" class="button learnmore">LEARN MORE</a> </div>
         </div>
   </section>
       <section class="clearfix wrap">
