@@ -26,8 +26,9 @@
     </cfif>
     <cfreturn result>
   </cffunction>
+ 
   
-  <cffunction name="SafeEmail" output="false" returntype="string" access="public" hint="Returns an email formatted to be safe from spam-spiders">
+<cffunction name="SafeEmail" output="false" returntype="string" access="public" hint="Returns an email formatted to be safe from spam-spiders">
 <cfargument name="emailaddress" required="yes" type="string" />
 <cfargument name="mailto" required="no" type="boolean" default="no" />
 <cfscript>

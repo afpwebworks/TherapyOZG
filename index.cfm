@@ -1,5 +1,5 @@
 <cfparam default="Welcome"  name="request.pagename" />
-
+<cfset util = application.beanfactory.getbean("UtilitiesLibrary") />
 <!doctype html>
 <html>
 	<head>
@@ -12,7 +12,11 @@
 	<link rel="apple-touch-icon-precomposed" href="/css/ico/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="/css/ico/favicon.png">
 	<cfoutput>
-      <title>#application.sitename# <cfif isdefined("request.pagename")> #request.pagename#</cfif></title>
+    <title>#application.sitename#
+    <cfif isdefined("request.pagename")>
+      #request.pagename#
+    </cfif>
+    </title>
     </cfoutput>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
@@ -25,17 +29,19 @@
 	</head>
 
 	<body>
-<header class="wrap clearfix" role='banner' itemscope itemtype='https://schema.org/WPHeader'>
-      <div class="logo_title">
-    <picture>
-          <source srcset="img/TherapyOZLogo.png, img/TherapyOZLogo_retina.png 2x">
-          <img class="logo" srcset="img/TherapyOZLogo.png, img/TherapyOZLogo_retina.png 2x" alt="Therapy Oz Logo"/> </picture>
-    <h1 class="title">THERAPY <span>Oz</span></h1>
-  </div>
-      <nav role="navigation" itemscope itemtype='https://schema.org/SiteNavigationElement'>
-    <h1 class="hidden">Main Navigation</h1>
-    <div class="navicon closed"><i class="fa fa-navicon"></i></div>
-    <ul class="navmenu" id="opennav">
+   <header class="wrap clearfix" role='banner' itemscope itemtype='https://schema.org/WPHeader'>
+    <div class="logo_title">
+  <picture>
+        <source srcset="img/TherapyOZLogo.png, img/TherapyOZLogo_retina.png 2x">
+        <img class="logo" srcset="img/TherapyOZLogo.png, img/TherapyOZLogo_retina.png 2x" alt="Therapy Oz Logo"/> </picture>
+  <h1 class="title">THERAPY <span>Oz</span></h1>
+  <h3 style="font-weight:900;"><img src="/img/FacebookIcon.jpg" alt="Join us on facebook" style="float:left; margin-right: 3px;"</a><a href="https://www.facebook.com/groups/953987707955202/" target="blank">Join my Facebook group, Hypnotherapy Australia </a></h3>
+</div>
+
+    <nav role="navigation" itemscope itemtype='https://schema.org/SiteNavigationElement'>
+<h1 class="hidden">Main Navigation</h1>
+<!----[ <div class="navicon closed"><i class="fa fa-navicon"></i></div>
+ <ul class="navmenu" id="opennav">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#about">About Us<span>+</span></a>
         <ul>
@@ -53,26 +59,37 @@
       </li>
           <li><a href="#marketing">Marketing</a></li>
           <li><a href="#contact">Contact</a></li>
-        </ul>
-  </nav>
-    </header>
+        </ul>  ]----MK ----> 
+</nav> </header>
+<cfoutput>
 <main role="main" class="clearfix">
-      <section class="herounit">
-    <style>
+<section class="herounit"> 
+
+<!----[   <style>
 		.herounit {	
-		background-image: url(img/AdobeStock_82719426_WM.jpg);
+		background-image: url(img/AdobeStock_80961585.jpg);
 		background-repeat:no-repeat;
 		background-position:center;
 		}
+	</style>  ]----MK ---->
+<style>
+		a:link, a:visited, {text-decoration: underline};
 	</style>
-    <div class="wrap">
-          <h2>Web Presence Instantly</h2>
-          <p>Website design, hosting and management for professionals.  Clients are waiting to find you.</p>
-          <p>Stay tuned for more information. In the meantime, <a href="https://www.facebook.com/groups/953987707955202/" target="blank">join my Facebook group, Hypnotherapy Australia </a></p>
-      <div> <a href="#" class="button getstarted">GET STARTED</a> <a href="#" class="button learnmore">LEARN MORE</a> </div>
-        </div>
-  </section>
-      <section class="clearfix wrap">
+<img class="" src="/img/AdobeStock_80961585.jpg" >
+<div class="wrap">
+<h2>Welcome to<br>
+      Websites For Therapists Australia</h2>
+<p><strong>Host</strong>, setup and run a professional website.<br>
+      We make it easy for you, with templates designed for <strong>your</strong> therapy <strong>business</strong>.</p>
+<p>Plans for every <strong>budget</strong>, starting from $250 setup + $50/month.<br>
+      Support included.</p>
+<p>For more info, contact us at #util.safeemail("andrew@adhypno.com.au", true)#</p>
+<p>Stay tuned for more information.<br>
+      In the meantime, <a href="https://www.facebook.com/groups/953987707955202/" target="blank">join my Facebook group, Hypnotherapy Australia </a></p>
+<!----[  <div> <a href="#" class="button getstarted">GET STARTED</a> <a href="#" class="button learnmore">LEARN MORE</a> </div>
+        </div>  ]----MK ----> 
+</section> 
+<!----[  <section class="clearfix wrap">
     <h1 class="hidden">Why Therapy Oz is Amazing</h1>
     <div class="point">
           <h2><i class="fa fa-rocket"></i> Market your practice</h2>
@@ -94,8 +111,8 @@
           <p>Not only do we build beautiful user friendly websites they are all mobile responsive and will automatically adapt to your mobile devices screen size. Responsive design is what Google recommends.</p>
           <p class="pointlink"><a href="#">Method for success &rsaquo;&rsaquo;&rsaquo;</a></p>
         </div>
-  </section>
-      <section class="welcome">
+  </section>  ]----MK ----> 
+<!----[  <section class="welcome">
     <div class="wrap clearfix">
           <div class="infovid">
         <iframe width="640" height="480" src="//www.youtube.com/embed/rLDgQg6bq7o" frameborder="0" allowfullscreen></iframe>
@@ -106,8 +123,8 @@
         <p>Browse our site and see for yourself why you need Therapy Oz.</p>
       </div>
         </div>
-  </section>
-      <section class="feedback wrap clearfix">
+  </section>  ]----MK ----> 
+<!----[  <section class="feedback wrap clearfix">
     <h1>What People Are Saying</h1>
     <div class="testimonial">
           <div class="says">&ldquo;It's just brilliant. I will recommend Therapy Oz to everyone I know!&rdquo;
@@ -133,27 +150,28 @@
       </div>
           <div class="source">- Some other Magazine</div>
         </div>
-  </section>
-    </main>
-<div class="footer"> <cfoutput>
-    <footer role="complementary" class="clearfix wrap" itemscope itemtype="https://schema.org/WPFooter">
-    <div class="copyright">&copy; #datepart("yyyy", now())# Therapy Oz . All Rights Reserved.</div>
-    <div class="social">
-      <div class="icon"> <a href="http://www.twitter.com/startupstwitterhandle" target="_blank"><i class="fa fa-twitter-square"></i></a> </div>
-      <div class="icon"> <a href="https://www.facebook.com/groups/privatepracticesupport/" target="_blank"><i class="fa fa-facebook-square"></i></a> </div>
-      <div class="icon"> <a href="http://plus.google.com/startupsgplus" target="_blank"><i class="fa fa-google-plus-square"></i></a> </div>
-    </div>
+  </section>  ]----MK ---->
+</main>
+</cfoutput>
+<div class="footer">
+      <cfoutput> <footer role="complementary" class="clearfix wrap" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="copyright">&copy; #datepart("yyyy", now())# Therapy Oz . All Rights Reserved.</div>
+  <div class="social">
+        <!----[  <div class="icon"> <a href="http://www.twitter.com/startupstwitterhandle" target="_blank"><i class="fa fa-twitter-square"></i></a> </div>  ]----MK ---->
+        <div class="icon"> <a href="https://www.facebook.com/groups/953987707955202/" target="_blank"><i class="fa fa-facebook-square"></i></a> </div>
+        <!----[  <div class="icon"> <a href="http://plus.google.com/startupsgplus" target="_blank"><i class="fa fa-google-plus-square"></i></a> </div>  ]----MK ---->
+      </div>
   </cfoutput>
-      </footer>
-    </div>
+      </footer> </div>
 
-<!----[  Dumps visible only to webmaster at 203.214.72.14  ]----MK ---->
-<cfif cgi.REMOTE_ADDR eq "203.214.72.14">
+<!----[  Dumps visible only to webmaster at 203.214.72.14  ]----MK ----> 
+<!----[  <cfif cgi.REMOTE_ADDR eq "203.214.72.14">
       <cfoutput>
     <p>Dumps visible only to #cgi.remote_addr#</p>
   </cfoutput>
       <cfdump var="#application#" label="Application vars" />
       <cfdump var="#session#" label="Session vars" />
-    </cfif>
+    </cfif>  ]----MK ---->
+    
 </body>
 </html>
